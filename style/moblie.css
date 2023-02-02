@@ -1,0 +1,36 @@
+#section2{
+    flex-direction: column;
+    align-items: center;
+}
+#navbar{
+    padding: 1rem 3rem;
+}
+#navbar-options-left {
+    display: none;
+}
+#close-ico{
+    display: block;
+    transition: 0.4s;
+}
+#menu-ico{
+    display: block;
+}
+#account-ico{
+    display: none;
+}
+/* #section-side{
+    display: none;
+    transition: 0.3s linear;
+} */
+.profile{
+    margin: 3rem 0rem;
+    margin-left: 4rem;
+    width: 20rem;
+    color: #D5EFF2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #211;
+    border: none;
+    border-radius: 0.5rem;
+}

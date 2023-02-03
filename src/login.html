@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../style/moblie.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background-image" id="background-image"><img src="../IMAGES/library.jpg" alt="library" id="bg-img"></div>
+        <div class="backdrop" id="backdrop"></div>
+        <div class="welcome-modal" id="welcome-modal">
+
+            <div class="welcome-title" id="welcome-title">
+                <h1>Welcome!</h1>
+                <h3>This is the site of Microlink Information Technology College</h3>
+            </div>
+            <div class="about-us" id="about-us">
+                <h3 id="about-us-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                    exercitationem totam necessitatibus ipsa velit vero odio est impedit ad. Magni modi 
+                    ipsam perferendis adipisci tenetur saepe odit sed est cumque?
+                </h3>
+                <button class="goto-signin" id="goto-signin">
+                    Sign In
+                </button>
+                <button id="about-us-btn">More</button>
+
+            </div>
+        </div>
+
+
+
+        <div class="login-modal" id="login-modal">
+        <div class="login-logo" id="login-logo">
+            <h1 class="lead" id="logo-content">College of Microlink</h1>
+        </div>
+        <div class="login-form" id="login-form">
+        <form id="form-login">
+            <label for="first name" class="lbl" id="label-fname">First name</label>
+            <input type="text" class="inp" id="inp-fname">
+            <label for="last name" class="lbl" id="label-lname">Last name</label>
+            <input type="text" class="inp" id="inp-lname">
+
+            <label for="email" class="lbl" id="label-email">Email</label>
+            <input type="email" class="inp" id="input-email">
+
+            <div class="account-type">                
+            <label for="account type" class="lbl" id="label-account-type">Account Type</label>
+            <select name="accounts" onchange="makeUPVisible()" class="inp" id="select-account-type">
+                <option value=""></option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            </div>
+
+            <div class="username-pass" id="username-pass">
+                <label for="username" class="lbl" id="label-username">Username</label>
+                <input type="text" class="inp" id="input-username">
+    
+                <label for="email" class="lbl" id="label-email">Password</label>
+                <input type="password" class="inp" id="input-password">
+            </div>
+
+            <div class="choose-gender">
+            <label for="gender" class="lbl-in" id="label-gender">Gender</label>
+            <label for="male"   class="lbl-in" id="label-male">Male<input type="radio" class="input-gender" name="gender"></label>
+            <label for="female" class="lbl-in" id="label-female">Female<input type="radio" class="input-gender" name="gender"></label>
+            </div>
+            </form>
+            <!-- <input type="submit" class="inp-btn inp" value="Sign In" id="submit-login"> -->
+            <button class="login-btn inp" id="submit-login">Submit</button>
+            <button class="login-btn inp" id="cancel-login">Cancel</button>
+        </div>
+        </div>
+    </div>
+    <script src="../JS/login.js"></script>
+</body>
+</html>

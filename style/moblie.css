@@ -1,36 +1,35 @@
-#section2{
-    flex-direction: column;
-    align-items: center;
+/*style for login.css */
+
+#welcome-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    color: #d6ded3;
+    font-family: open sans,Lato,Arial,sans-serif;
+    filter: blur(0.04rem);
 }
-#navbar{
-    padding: 1rem 3rem;
-}
-#navbar-options-left {
-    display: none;
-}
-#close-ico{
-    display: block;
-    transition: 0.4s;
-}
-#menu-ico{
-    display: block;
-}
-#account-ico{
-    display: none;
-}
-/* #section-side{
-    display: none;
-    transition: 0.3s linear;
+/* #about-us{
+    padding: 2rem;
 } */
-.profile{
-    margin: 3rem 0rem;
-    margin-left: 4rem;
-    width: 20rem;
-    color: #D5EFF2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #211;
-    border: none;
-    border-radius: 0.5rem;
+#about-us h3 {
+    display: none;
+}
+#goto-signin,#about-us-btn{
+    padding: 2rem 4rem;
+    border: #e33 0.4rem solid;
+}
+#bg-img{
+    width: 100%;
+    min-height: 200vh;
+    object-fit: cover;
+}
+
+#login-modal{
+   margin: 5vh 10vw; 
+   width: 80%;
+   display: block;
+   background: #fff;
+   font-family: open sans , arial;
+   font-size: 1.8rem;
 }

@@ -1,11 +1,3 @@
-const usernamePass = document.getElementById('username-pass');
-const loginModal = document.getElementById('login-modal');
-const cancelLoginBtn = document.getElementById('cancel-login');
-const signInModalBtn = document.getElementById('goto-signin');
-const welcomeModal = document.getElementById('welcome-modal');
-const bgImage = document.getElementById('bg-img');
-
-
 const blurBg = (bg) =>{
     bg.style.filter = "blur(0.5rem)"
 }
@@ -20,17 +12,52 @@ const makeUPVisible = () =>{
     makeVisible(usernamePass);
 }
 
+const clearForm = (input) =>{
+    input.forEach(inp => {
+            inp.value = "";            
+    });
+}
+
 const makeLoginModalVisible = () =>{
-    bgImage.style.minHeight = "200vh";
-    makeNonVisible(welcomeModal);
-    makeVisible(loginModal);
+    document.getElementById('bg-img').style.minHeight = "140vh";
+    makeNonVisible(document.getElementById('welcome-modal'));
+    makeVisible(document.getElementById('register-modal'));
 }
 
 const cancelLoginProcess = () =>{
-    makeNonVisible(loginModal);
-    makeVisible(welcomeModal);
-    bgImage.style.minHeight = "100vh";
+    makeNonVisible(document.getElementById('register-modal'));
+    makeVisible(document.getElementById('welcome-modal'));
+    document.getElementById('bg-img').style.minHeight = "100vh";
 }
 
-cancelLoginBtn.addEventListener('click',cancelLoginProcess);
-signInModalBtn.addEventListener('click',makeLoginModalVisible);
+const makeLoginFormVisible = () =>{
+    const registerForm = document.getElementById('register-form');
+    const loginForm = document.getElementById('login-form');
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(inp => {
+        if (!inp.classList.contains('register-btn')) {
+            inp.value = "";            
+        }
+    });
+
+    makeVisible(loginForm);
+    makeNonVisible(registerForm);
+    document.getElementById('bg-img').style.minHeight = "140vh";
+}
+
+const makeRegisterFormVisible = () =>{
+    const registerForm = document.getElementById('register-form');
+    const loginForm = document.getElementById('login-form');
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(inp => {
+        if (!inp.classList.contains('register-btn')) {
+            inp.value = "";            
+        }
+    });
+
+    makeVisible(registerForm);
+    makeNonVisible(loginForm);
+    document.getElementById('bg-img').style.minHeight = "160vh";
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../style/moblie.css">
+    <title>MLITC | Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background-image" id="background-image"><img src="../IMAGES/collaboration.jpg" alt="library" id="bg-img"></div>
+        <div class="backdrop" id="backdrop"></div>
+        <div class="welcome-modal" id="welcome-modal">
+                <div class="welcome-title" id="welcome-title">
+                    <h1>Welcome!</h1>
+                    <h3>This is the site of Microlink Information Technology College</h3>
+                </div>
+                <div class="about-us" id="about-us">
+                    <!-- <h3 id="about-us-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                        exercitationem totam necessitatibus ipsa velit vero odio est impedit ad. Magni modi 
+                        ipsam perferendis adipisci tenetur saepe odit sed est cumque?
+                    </h3> -->
+                    <button onclick="makeLoginModalVisible()" class="goto-signin" id="goto-signin">
+                        Sign Up
+                    </button>
+                    <button id="about-us-btn">More</button>
+                </div>
+        </div>
+
+        <div class="register-modal" id="register-modal" open>
+        <div class="login-logo" id="login-logo">
+            <h1 class="lead" id="logo-content">College of Microlink</h1>
+        </div>
+
+        <div class="login-form" id="login-form">
+            <label for="username" class="lbl" id="login-username">User name</label>
+            <input type="text" class="inp" id="login-input-username" required>
+            <label for="password" class="lbl" id="login-password">Password</label>
+            <input type="password" class="inp" id="login-input-password" required>
+            <a href="../src/home.html" rel="noopener noreferrer"><input type="submit" value="Login" class="inp register-btn" id="login-input-submit"></a>
+            <input type="reset" value="Cancel" class="inp register-btn" onclick="cancelLoginProcess()" id="login-input-reset" >
+            <div class="goto-register" id="goto-register">
+                <label for="" class="lbl-in" id="label-goto-login">Create a new account 
+                    &ThickSpace;<a onclick="makeRegisterFormVisible()" href="#" class="btn-goto" id="btn-goto-register">Register</a>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="register-form" id="register-form">
+        <form id="form-register">
+            <label for="first name" class="lbl" id="label-fname">First name</label>
+            <input type="text" class="inp" id="inp-fname" required>
+            <label for="last name" class="lbl" id="label-lname">Last name</label>
+            <input type="text" class="inp" id="inp-lname" required>
+
+            <label for="email" class="lbl" id="label-email">Email</label>
+            <input type="email" class="inp" id="input-email" required>
+
+            <div class="choose-gender">
+            <label for="gender" class="lbl-in" id="label-gender">Gender</label>
+            <label for="male"   class="lbl-in" id="label-male">Male<input type="radio" class="input-gender" name="gender" required></label>
+            <label for="female" class="lbl-in" id="label-female">Female<input type="radio" class="input-gender" name="gender"required></label>
+            </div>
+            </form>
+
+            <div class="submit-cancel" id="submit-cancel">
+                <button class="register-btn inp" id="register">Register</button>
+                <button onclick="cancelLoginProcess()" class="register-btn inp" id="cancel-register">Cancel</button>
+            </div>
+            <div class="goto-register" id="goto-register">
+                <label for="" class="lbl-in" id="label-goto-login">Already have an account 
+                    &ThickSpace;<a onclick="makeLoginFormVisible()" href="#" class="btn-goto" id="btn-goto-login">Login</a>
+                </label>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="../JS/login.js"></script>
+    <script src="../JS/accounts.js"></script>
+</body>
+</html>

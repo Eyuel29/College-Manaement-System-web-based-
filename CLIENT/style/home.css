@@ -1,0 +1,168 @@
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: open sans, Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+}
+
+#container{
+    height: 200vh;
+    width: 100%;
+    transition: 0.4s;
+    background: #fee;
+}
+
+.navbar-outer{
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #211;
+    background: #fee;
+    /* box-shadow: rgba(34, 17, 17, 0.1) 0px 4px 29px 0px; */
+    /* border-bottom: #211 solid 0.1rem; */
+}
+
+.navbar-inner{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-inner #micro-logo{
+    width: 4.5rem;
+    border-radius: 50%;
+}
+#nav-logo{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex: 2;
+}
+
+#nav-logo-title{
+    padding: 0rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #211;
+}
+
+#nav-options{
+    flex: 4;
+}
+.nav-option-link{
+    text-decoration: none;
+    color: #211;
+}
+
+.navbar-inner ul{
+    list-style: none;
+    display: flex;
+}
+
+.navbar-inner ul li{
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-inner ul li::after{
+    content: '';
+    background:  #e33;
+    height: 0.2rem;
+    width: 100%;
+    display: block;
+    transition: 0.2s;
+    transform: scale(0,1);
+}
+.navbar-inner ul li:hover::after{
+    transform: scale(1,1);
+    transition: 0.4s;
+}
+
+.navbar-inner ul li:hover{
+    color: #e33;
+    transition: 0.3s;
+}
+#nav-profile-burger{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+}
+#img-lightmode{
+    display: none;
+    transition: 0.4s;
+
+}
+#img-nightmode{
+    display: block;
+    transition: 0.4s;
+
+}
+#img-nightmode:hover,#img-lightmode:hover{
+    transform: rotate(120deg);
+    transition: 0.4s;
+}
+#nav-profile{
+    padding: 1rem 2rem;
+}
+
+#nav-profile img{
+    width: 3.5rem;
+}
+
+#nav-options-burger-menu{
+    padding: 1rem 2rem;
+    display: none;
+}
+
+.lead{
+    color: #211;
+    fill: #211;
+}
+
+#content{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 11rem;
+}
+
+.menu-modal{
+    width: 40%;
+    background: #211;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(34, 17, 17, 0.1) 5px 0px 29px 0px;
+    display: none;
+    transition: 0.4s;
+}
+.menu-modal li,.menu-modal a{
+    list-style: none;
+    text-decoration: none;
+}
+.menu-modal li{
+    margin:3rem;
+    text-align: center;
+}
+.menu-modal div{
+    text-align: right;
+    padding: 3rem 2rem;
+}
+.menu-modal a{
+    color: #211;
+    font-weight: 600;
+    font-size: 2.3rem;
+}

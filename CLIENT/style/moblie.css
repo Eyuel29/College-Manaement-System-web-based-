@@ -1,0 +1,65 @@
+/*style for login.css */
+
+:root{
+    font-size: 42.5%;
+}
+
+#welcome-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    color: #d6ded3;
+    font-family: open sans,Lato,Arial,sans-serif;
+    filter: blur(0.04rem);
+}
+
+#about-us h3 {
+    display: none;
+}
+
+#goto-signin,#about-us-btn{
+    padding: 2rem 4rem;
+    border: #e33 0.4rem solid;
+}
+
+#bg-img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#register-modal{
+   margin: 5vh 10vw; 
+   width: 80%;
+   display: block;
+   background: #fff;
+   font-family: open sans , arial;
+   font-size: 1.8rem;
+}
+
+
+#nav-profile{
+    display: none;
+}
+#nav-options-burger-menu{
+    display: block;
+}
+#nav-options{
+    display: none;
+}
+
+.navbar-inner #micro-logo{
+    width: 6rem;
+}
+#nav-logo{
+    padding: 2rem 2rem;
+}
+
+#nav-logo-title{
+    font-size: 2rem;
+}
+#img-nightmode,#img-lightmode{
+    width: 4.5rem;
+    height: 4.5rem;
+}

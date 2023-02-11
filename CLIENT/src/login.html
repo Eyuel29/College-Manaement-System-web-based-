@@ -24,62 +24,66 @@
                         ipsam perferendis adipisci tenetur saepe odit sed est cumque?
                     </h3> -->
                     <button onclick="makeLoginModalVisible()" class="goto-signin" id="goto-signin">
-                        Sign Up
+                        Sign In
                     </button>
                     <button id="about-us-btn">More</button>
                 </div>
         </div>
 
-        <div class="register-modal" id="register-modal" open>
+        <div class="register-modal" id="register-modal">
+
         <div class="login-logo" id="login-logo">
             <h1 class="lead" id="logo-content">College of Microlink</h1>
         </div>
 
-        <div class="login-form" id="login-form">
+        <div class="login-form" id="admin-login-form">
+            <form class="admin-login-form" action="/submit">
             <label for="username" class="lbl" id="login-username">User name</label>
             <input type="text" class="inp" id="login-input-username" required>
             <label for="password" class="lbl" id="login-password">Password</label>
             <input type="password" class="inp" id="login-input-password" required>
-            <a href="../src/home.html" rel="noopener noreferrer"><input type="submit" value="Login" class="inp register-btn" id="login-input-submit"></a>
-            <input type="reset" value="Cancel" class="inp register-btn" onclick="cancelLoginProcess()" id="login-input-reset" >
+
+            <button type="submit" class="inp login-btn" onclick="authenticateAccount()" id="login-input-submit">Login</button>
+            <button type="reset" class="inp login-btn" onclick="cancelLoginProcess()" id="login-input-reset" >Cancel</button>
+
+
+
             <div class="goto-register" id="goto-register">
-                <label for="" class="lbl-in" id="label-goto-login">Create a new account 
-                    &ThickSpace;<a onclick="makeRegisterFormVisible()" href="#" class="btn-goto" id="btn-goto-register">Register</a>
+                <label class="lbl-in">User account 
+                    &ThickSpace;<a onclick="makeUserFormVisible()" href="#" class="admin-user" id="btn-goto-user-login">Login</a>
                 </label>
             </div>
+        </form>
         </div>
 
 
-        <div class="register-form" id="register-form">
-        <form id="form-register">
+        <div class="login-form" id="user-login-form">
+        <form id="form-login">
+
             <label for="first name" class="lbl" id="label-fname">First name</label>
             <input type="text" class="inp" id="inp-fname" required>
             <label for="last name" class="lbl" id="label-lname">Last name</label>
             <input type="text" class="inp" id="inp-lname" required>
 
-            <label for="email" class="lbl" id="label-email">Email</label>
-            <input type="email" class="inp" id="input-email" required>
-
-            <div class="choose-gender">
-            <label for="gender" class="lbl-in" id="label-gender">Gender</label>
-            <label for="male"   class="lbl-in" id="label-male">Male<input type="radio" class="input-gender" name="gender" required></label>
-            <label for="female" class="lbl-in" id="label-female">Female<input type="radio" class="input-gender" name="gender"required></label>
-            </div>
-            </form>
-
             <div class="submit-cancel" id="submit-cancel">
-                <button class="register-btn inp" id="register">Register</button>
-                <button onclick="cancelLoginProcess()" class="register-btn inp" id="cancel-register">Cancel</button>
+                <button onclick="" class="login-btn inp" id="register">Login</button>
+                <button onclick="cancelLoginProcess()" class="login-btn inp" id="cancel-register">Cancel</button>
             </div>
+
+
             <div class="goto-register" id="goto-register">
-                <label for="" class="lbl-in" id="label-goto-login">Already have an account 
-                    &ThickSpace;<a onclick="makeLoginFormVisible()" href="#" class="btn-goto" id="btn-goto-login">Login</a>
+                <label class="lbl-in" >Admin account
+                    &ThickSpace;<a onclick="makeAdminFormVisible()" href="#" class="admin-user" id="btn-goto-admin-login">Login</a>
                 </label>
             </div>
+
+            
+        </form>
         </div>
         </div>
     </div>
     <script src="../JS/login.js"></script>
     <script src="../JS/accounts.js"></script>
+    <script src="../JS/jquery.js"></script>
 </body>
 </html>

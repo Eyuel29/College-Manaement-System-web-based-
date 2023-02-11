@@ -20,6 +20,37 @@ const createTableAdminAccount = () =>{
     });
 }
 
+const authenticateAccount = () =>{
+    let username = $("#login-input-username").val();
+    let password = $("#login-input-password").val();
+
+    db.transaction((transaction) =>{
+        const sql = `SELECT * FROM accountAdmin`;
+        transaction.executeSql(sql,undefined,
+        
+        (transaction,result) =>{
+                let row = result.rows.item(0);
+                let un = row.USERNAME;
+                let pa = row.PASSWORD;
+
+                if (un == username) {
+                    if (pa == password) {
+                        window.location.href = "./home.html";
+                        alert("Login successful!");
+                    }else{
+                        alert("Invalid password try again");
+                    }
+                }else{
+                    alert("Invalid username try again");
+                }
+        },
+        () =>{
+          console.log("No table to show data!");
+        }
+        );
+    });
+}
+
 const createUserAccountsTable = () =>{
     db.transaction((transaction)=>{
         let sql =  `
@@ -42,8 +73,6 @@ const createUserAccountsTable = () =>{
         );
     });
 }
-
-
 
 const AddAccounts = () =>{
         let useranme = "Admin";

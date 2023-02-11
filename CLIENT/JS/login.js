@@ -18,48 +18,6 @@ const clearForm = (input) =>{
     });
 }
 
-const fadeOut = () =>{
-    // setTimeout(hide, 1000);
-    // hide();
-}
-
-const hide = () =>{
-    let opacity = 0;
-    let count = 0;
-
-    const modal = document.getElementById('register-modal');
-    opacity = modal.style.opacity;
-
-    count = opacity/20;
-
-    if (opacity != 0) {   
-    for (let i = 20; i < 1; i--) {
-        setTimeout(() => {
-            modal.style.opacity -= count;            
-        }, 25);
-    }
-    }
-}
-
-const appear = () =>{
-    let opacity = 0;
-    let count = 0;
-
-    const modal = document.getElementById('register-modal');
-    opacity = modal.style.opacity;
-
-    count = opacity/20;
-
-    if (opacity != 1) {   
-    for (let i = 0; i < 21; i++) {
-        count += count;
-        setTimeout(() => {
-            modal.style.opacity = count;            
-        }, 25);
-    }
-    }
-}
-
 const makeLoginModalVisible = () =>{
     document.getElementById('bg-img').style.minHeight = "140vh";
     makeNonVisible(document.getElementById('welcome-modal'));
@@ -70,36 +28,35 @@ const cancelLoginProcess = () =>{
     makeNonVisible(document.getElementById('register-modal'));
     makeVisible(document.getElementById('welcome-modal'));
     document.getElementById('bg-img').style.minHeight = "100vh";
+    clearForm(document.querySelectorAll('input'));
 }
 
-const makeLoginFormVisible = () =>{
-    const registerForm = document.getElementById('register-form');
-    const loginForm = document.getElementById('login-form');
-    const inputs = document.querySelectorAll('input');
-
-    inputs.forEach(inp => {
-        if (!inp.classList.contains('register-btn')) {
-            inp.value = "";            
-        }
-    });
-
-    makeVisible(loginForm);
-    makeNonVisible(registerForm);
+const makeAdminFormVisible = () =>{
+    // const registerForm = document.getElementById('user-login-form');
+    const userLogin = document.getElementById('user-login-form');
+    const adminLogin = document.getElementById('admin-login-form');
+    
+    // inputs.forEach(inp => {
+    //     if (!inp.classList.contains('login-btn')) {
+    //         inp.value = "";            
+    //     }
+    // });
+    makeVisible(adminLogin);
+    makeNonVisible(userLogin);
     document.getElementById('bg-img').style.minHeight = "140vh";
 }
 
-const makeRegisterFormVisible = () =>{
-    const registerForm = document.getElementById('register-form');
-    const loginForm = document.getElementById('login-form');
+const makeUserFormVisible = () =>{
+    const userLogin = document.getElementById('user-login-form');
+    const adminLogin = document.getElementById('admin-login-form');
     const inputs = document.querySelectorAll('input');
 
-    inputs.forEach(inp => {
-        if (!inp.classList.contains('register-btn')) {
-            inp.value = "";            
-        }
-    });
-
-    makeVisible(registerForm);
-    makeNonVisible(loginForm);
+    // inputs.forEach(inp => {
+    //     if (!inp.classList.contains('login-btn')) {
+    //         inp.value = "";            
+    //     }
+    // });
+    makeVisible(userLogin);
+    makeNonVisible(adminLogin);
     document.getElementById('bg-img').style.minHeight = "160vh";
 }

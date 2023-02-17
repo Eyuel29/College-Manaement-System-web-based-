@@ -13,13 +13,24 @@ html,body{
     transition: 0.3s;
 }
 
+h4{
+    margin: 2rem 0rem;
+}
+section{
+    margin: 1rem;
+}
+
 #container{
-    height: 200vh;
+    min-height: 200vh;
     width: 100%;
     transition: 0.4s;
     background: #fee;
+    padding-bottom: 5rem;
 }
-
+.nav-closed{
+    min-height: 12rem;   
+    background: none;
+}
 .navbar-outer{
     display: block;
     position: sticky;
@@ -90,7 +101,7 @@ html,body{
     transition: 0.4s;
 }
 
-.navbar-inner ul li:hover{
+.navbar-inner ul li :hover{
     color: #e33;
     transition: 0.3s;
 }
@@ -132,7 +143,7 @@ html,body{
     fill: #211;
 }
 
-#content{
+.content{
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -141,28 +152,159 @@ html,body{
 
 .menu-modal{
     width: 40%;
-    background: #211;
+    background: #fee;
     position: fixed;
     top: 0;
     right: 0;
     box-shadow: rgba(34, 17, 17, 0.1) 5px 0px 29px 0px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
     display: none;
     transition: 0.4s;
 }
-.menu-modal li,.menu-modal a{
+.menu-modal li{
     list-style: none;
-    text-decoration: none;
 }
 .menu-modal li{
     margin:3rem;
     text-align: center;
 }
+
 .menu-modal div{
     text-align: right;
     padding: 3rem 2rem;
 }
-.menu-modal a{
-    color: #211;
+
+.table{
+    width: 100%;;
+    /* background: #fefefe; */
+    display: block;
+    /* margin: rem 2rem; */
+    border-collapse: collapse;
+    border: none;
+}
+td{
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    border: #88a 0.2rem solid;
+}
+#std-form-row td{
+    padding: 0rem 0rem;
+    text-align: center;
+}
+#std-form-row td input{
+    width: 100%;
+    padding: 2rem 0.4rem;
+    border: none;
+    outline:#88a;
+}
+
+
+.admin-option{
+    border: #88a solid 0.3rem;
+    width: 60vw;
+    margin: 4rem auto;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.admin-option-active{
+    /* background:rgba(189, 189, 205, 0.2); */
+    box-shadow: rgba(189, 189, 205, 0.2) 5px 0px 29px 0px;
+    width: 62vw;
+    transition: 0.3s;
+}
+.admin-option-title{
+    display: flex;
+    padding: 0rem 2rem;
+    justify-content: space-between;
+}
+.admin-option-title h1{
+    display: inline-block ;
+    margin: 10rem;
+}
+
+
+
+.add-user-form{
+    /* margin-top: 5rem; */
+    margin: 10rem;
+
+}
+.courses-list-table{
+    padding: 5rem;
+    display: none;
+}
+
+
+
+.admin-contact-list{
+    padding: 2.5rem;
+}
+.contact-title{
+    padding: 2.5rem;
+}
+.contact-option{
+    display: none;
+}
+.contact-message{
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.contact-body{
+    margin-left: 2rem;
+    /* background: #bbc; */
+    background: rgba(189, 189, 205, 0.2);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.contact-name{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+.contact-content{
+    font-size: 2rem;
+}
+.contact-date{
+    font-size: 1.3rem;
+    font-family: Raleway;
+    margin-top: 2rem;
+}
+
+
+.form-event{
+    margin: 0rem 5rem;
+    margin-bottom: 5rem;
+    display: block;
+}
+.event-add-view{
+    display: none;
+}
+.show-student-data-table{
+    display: none;
+}
+.event-list{
+    margin: 5rem 5rem;
+    font-size: 1.8rem;
+}
+.event-message{
+    background: rgba(189, 189, 205, 0.2);
+    border-radius: 1rem;
+    padding: 5rem;
+    margin: 5rem 0rem;
+}
+
+
+
+.inp-lead{
+    background: none;
     font-weight: 600;
-    font-size: 2.3rem;
+}
+form{
+    display: none;
+}
+.visible{
+    display: block;
 }

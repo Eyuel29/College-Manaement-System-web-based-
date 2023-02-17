@@ -187,7 +187,7 @@ html,body{
 }
 
 .login-btn:hover{
-    background: #fff;
+    background: none;
     color: #a11;
     transition: 0.3s;
     border: #c33 0.3rem solid;

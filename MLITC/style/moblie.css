@@ -63,3 +63,19 @@
     width: 4.5rem;
     height: 4.5rem;
 }
+
+
+.admin-option{
+    width: 85vw;
+}
+.table{
+    max-width: 90rem;
+    display: block;
+    border-collapse: collapse;
+    border: none;
+}
+td{
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+    border: #88a 0.2rem solid;
+}

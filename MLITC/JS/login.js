@@ -32,15 +32,15 @@ const cancelLoginProcess = () =>{
 }
 
 const makeAdminFormVisible = () =>{
-    // const registerForm = document.getElementById('user-login-form');
     const userLogin = document.getElementById('user-login-form');
     const adminLogin = document.getElementById('admin-login-form');
-    
-    // inputs.forEach(inp => {
-    //     if (!inp.classList.contains('login-btn')) {
-    //         inp.value = "";            
-    //     }
-    // });
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(inp => {
+        if (!inp.classList.contains('login-btn')) {
+            inp.value = "";            
+        }
+    });
     makeVisible(adminLogin);
     makeNonVisible(userLogin);
     document.getElementById('bg-img').style.minHeight = "140vh";
@@ -50,12 +50,11 @@ const makeUserFormVisible = () =>{
     const userLogin = document.getElementById('user-login-form');
     const adminLogin = document.getElementById('admin-login-form');
     const inputs = document.querySelectorAll('input');
-
-    // inputs.forEach(inp => {
-    //     if (!inp.classList.contains('login-btn')) {
-    //         inp.value = "";            
-    //     }
-    // });
+    inputs.forEach(inp => {
+        if (!inp.classList.contains('login-btn')) {
+            inp.value = "";            
+        }
+    });
     makeVisible(userLogin);
     makeNonVisible(adminLogin);
     document.getElementById('bg-img').style.minHeight = "160vh";
